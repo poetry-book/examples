@@ -1,0 +1,107 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Poem
+% LaTeX Template
+% Version 1.0 (2/11/2015)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% General notes:
+% 1) All lines in a verse environment must end with \\, the last verse in a stanza
+% must end in \\!
+% 2) This template is based on the verse package, see the package documentation
+% included with the template for further customisation options
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt, a4paper]{article} % Document font size and paper size
+
+% allow different paper format, like a5paper
+\usepackage[pass]{geometry}
+
+\usepackage{verse} % Required for typesetting poems - this package drives this template
+
+\usepackage[T1]{fontenc} % International character encodings
+\usepackage{palatino} % Use the Palatino font by default\usepackage[Preface.txt]{babel}
+
+\setlength{\parindent}{0pt} % Disable paragraph indentation
+
+\renewcommand{\poemtoc}{subsection}
+
+\renewcommand*\contentsname{Table of Contents}
+
+\setlength{\stanzaskip}{0.75\baselineskip} % The distance between stanzas
+
+\title{Complex book}
+\author{Marco Ieni}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\section*{Preface}
+
+Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.  Curabitur vulputate vestibulum lorem.  Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.  Sed id ligula quis est convallis tempor.  Curabitur lacinia pulvinar nibh.  Nam a sapien.
+
+Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+
+Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
+
+
+\newpage
+\pagestyle{plain}
+\pagenumbering{arabic}
+
+
+\poemtitle{First poem}
+\settowidth{\versewidth}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+\begin{verse}[\versewidth]
+
+Pellentesque dapibus suscipit ligula. \\
+Donec posuere augue in quam. \\
+Etiam vel tortor sodales tellus ultricies commodo. \\
+Suspendisse potenti. \\!
+
+Aenean in sem ac leo mollis blandit. \\
+Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi. \\!
+
+Phasellus lacus. \\
+Etiam laoreet quam sed arcu. \\!
+
+\end{verse}
+\newpage
+
+
+\poemtitle{Second poem}
+\settowidth{\versewidth}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+\begin{verse}[\versewidth]
+
+Aliquam erat volutpat. \\
+Nunc eleifend leo vitae magna. \\
+In id erat non orci commodo lobortis. \\!
+
+Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus. \\
+Sed diam. \\
+Praesent fermentum tempor tellus. \\
+Nullam tempus. \\!
+
+Mauris ac felis vel velit tristique imperdiet. \\
+Donec at pede. \\
+Etiam vel neque nec dui dignissim bibendum. \\
+Vivamus id enim. \\!
+
+\end{verse}
+\newpage
+
+\end{document}
