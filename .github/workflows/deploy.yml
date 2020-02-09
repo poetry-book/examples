@@ -16,8 +16,7 @@ jobs:
       run: cargo install poetry-book-cli
     - name: Run poetry-book-cli
       run: |
-        ls -al
-        examples=(*/)
+        examples=$(ls -d */)
         echo "$examples"
         mkdir deploy
         for dir in $examples; do
