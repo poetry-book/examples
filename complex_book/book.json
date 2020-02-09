@@ -1,0 +1,13 @@
+{
+    "author": "Marco Ieni",
+    "title": "Complex book",
+    "toc_title": "Table of Contents",
+    "preface": "Preface.txt",
+    "poem_formatting": {
+        "centered_verse": "average"
+    },
+    "poems": [
+        "First poem.txt",
+        "Second poem"
+    ]
+}
