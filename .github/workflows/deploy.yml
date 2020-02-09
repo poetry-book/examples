@@ -23,6 +23,30 @@ jobs:
           poetry-book-cli $dir
           mv $dir/out/*.tex deploy/$dir
         done
+    - name: build website
+      run: |
+        echo "<!DOCTYPE HTML>
+        <html>
+        <head>
+            <meta charset="utf-8" />
+            <title>Poetry book Examples</title>
+        </head>
+        <body>
+        <h1>Poetry book Examples</h1>
+        Examples input <a href=\"https://github.com/poetry-book/examples\">here</a>. Examples output:" >> deploy/index.html
+        for dir in deploy/*/; do
+          dir_basename=$(basename $dir)
+          echo "<h2>$dir_basename</h1>
+              <ul>" >> deploy/index.html
+          files=$(ls $dir)
+          echo files:
+          echo $files
+          for file in $files; do
+            echo "        <li><a href=\"$dir_basename/$file\">$file</a></li>" >> deploy/index.html
+          done
+          echo "    </ul>" >> deploy/index.html
+        done
+        echo "</body></html>" >> deploy/index.html
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v2
       env:
