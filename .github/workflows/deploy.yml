@@ -17,11 +17,13 @@ jobs:
     - name: Run poetry-book-cli
       run: |
         examples=(*/)
+        echo "$examples"
         mkdir deploy
         for dir in $examples; do
           mkdir deploy/$dir
           poetry-book-cli $dir
           mv $dir/out/*.tex deploy/$dir
+          ls deploy
         done
     - name: build website
       run: |
